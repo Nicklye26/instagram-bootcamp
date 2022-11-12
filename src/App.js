@@ -6,6 +6,7 @@ import InstagramAuth from "./Components/Instagram-authentication";
 import InstagramFeed from "./Components/Instagram-feed";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
+import InstagramChat from "./Components/instagram-chat";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -52,6 +53,7 @@ export default class App extends React.Component {
         {this.state.userLoggedIn ? instagramPost : createAccountOrSignIn}
         <br />
         <InstagramFeed />
+        <InstagramChat />
       </div>
     );
 
